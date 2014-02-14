@@ -3,37 +3,31 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>NerdyDevs, Yo</title>
+    <title>NerdyDev Pets</title>
 
     <style type="text/css">
-        .nerdNav li {
-            float: left;
-            display: inline-block;
-            width: 150px;
-            border: 1px solid black;
-            text-align: center;
-            margin-right: 3px;
-            list-style-type: none;
-        }
-        p {width: 100%;float: left;background-color: pink;}
+        .nerdNav, .nerdNav li a {display: block;text-decoration: none;}
+        .nerdNav li {float: left;display: block;background-color: aliceblue;box-shadow: 1px 2px 6px #000;text-align: center;padding: .5em;width: 10em;position: relative;margin: .1em;}
+        .nerdNav li:hover {background-color: azure;}
+        .nerdNav li ul {position: absolute;top: 35px;padding: 0;display: none;}
+        .nerdNav li:hover ul {display: block;}
+        .nerdNav li ul.pets li {float: none;background-color: ghostwhite;position: relative;display: block;right: -4em;width: 5em;margin: 0;}
+        .nerdNav li ul.pets li:hover {background-color: yellowgreen;box-shadow: 0 0 8px #000;z-index: 100;}
     </style>
-
 </head>
-    <body>
-        <header>
-            <h1>Hello World! Meet UR Nurds</h1>
-        </header>
-        <nav>
-            <ul class="nerdNav">
-                <!-- stuff goes in here with javascript or jquery -->
-            </ul>
-            <p id="correctAnswer"></p>
-        </nav>
+<body>
+    <header>
+        <h1>Meet UR Nurds</h1>
+    </header>
+    <nav>
+        <ul class="nerdNav">
+            <!-- stuff goes in here with javascript or jquery -->
+        </ul>
+    </nav>
 
-        <p>OMG did this work?? Someone make this look better or I'll put a scrolling marquee up in heeyah</p>    
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <!--<script src="js/bootstrap.min.js"></script>-->
-        <script src="navtest.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!--<script src="js/bootstrap.min.js"></script>-->
+    <script src="navtest.js"></script>
 
-    </body>
+</body>
 </html>

@@ -1,4 +1,6 @@
-﻿var nerdyDevs =
+﻿$(document).ready(function() {
+ 
+var nerdyDevs =
 [
 {
     name: "Kala",
@@ -29,18 +31,17 @@
 
 ];
 
-$(document).ready(function () {
-    var i = 0;
-    var j = 0;
-    for (i = 0; i < nerdyDevs.length; i++) {
-        $superNerds = nerdyDevs[i];
-        $nerdyDev = nerdyDevs[i].name;
-        for (j = 0; j < $superNerds.pets.length; j++) {
-            $nerdyPet = $superNerds.pets;
-            $petItem = "<li class='petNerds'>" + $nerdyPet + "</li>";
-        }
-        $navItem = "<li class='nerds'>" + $nerdyDev + "<ul class='nerdPets'>" + $petItem + "</ul></li>";
-        $(".nerdNav").append($navItem);
-    }
+$.each(nerdyDevs, function (i, owner) {
+
+    $('ul.nerdNav').append("<li id='" + owner.name + "'><a href=''>" + owner.name + "</a></li>");
+
+    $('li#' + owner.name + '').append("<ul class='_" + owner.name + " pets'>");
+
+    $.each(nerdyDevs[i].pets, function (i, petName) {
+
+        $("ul._" + owner.name + ".pets").append("<li><a href=''>" + petName + "</a>");
+    });
+
+});
 });
 //why won't this work???  I have made a huge mistake.
